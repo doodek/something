@@ -17,8 +17,6 @@ ext {
     junitVersion = '5.10.2'
 }
 
-sourceCompatibility = '22'
-targetCompatibility = '22'
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
@@ -37,7 +35,6 @@ javafx {
 dependencies {
     implementation('org.controlsfx:controlsfx:11.2.1')
     implementation('org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0')
-    implementation("org.openjfx:javafx-controls:17.0.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }

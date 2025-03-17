@@ -1,3 +1,4 @@
+package com.example.brixx;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
