@@ -53,12 +53,14 @@ public class HelloApplication extends Application {
         // Here all stuff happens. The WallBuilder plans the layout of the wall
         // and order in which the bricks should be placed
         stretcher.buildWall();
+        int count = wall.getBrickCount();
         setUpWallDisplay(wall, root);
 
         robotEnvelopeVisualization = new Rectangle(robot.getX() / 4, robot.getY() / 4, robot.getEnvelope_width() / 4, robot.getEnvelope_height() / 4);
         robotEnvelopeVisualization.setFill(Color.RED);
         robotEnvelopeVisualization.setOpacity(0.2);
         root.getChildren().add(robotEnvelopeVisualization);
+        stage.setTitle("brixx by doodek for Monumental - " + count + " bricks total");
 
         scene.setOnKeyPressed(event -> {
             if (event.getCode() == KeyCode.ENTER) {
